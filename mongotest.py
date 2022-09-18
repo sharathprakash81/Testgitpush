@@ -23,7 +23,11 @@ d={
     "email": "sharathprakash81@gmail.com",
     "surname":"Prakash"
 }
-
+d={
+    "name": "Sharath Prakash",
+    "email": "sharathprakash81@gmail.com",
+    "surname":"Prakash"
+}
 db1=client['mongotest']
 coll=db1['test']
 coll.insert_one(d)
