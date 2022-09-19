@@ -67,4 +67,15 @@ data =  [
     ]
 database = client['inventory']
 collection= database["table"]
-collection.insert_many(data)
+#collection.insert_many(data)
+#d= collection.find({'status':'A'})
+#d= collection.find({'status': {'$in':['A', 'P']}})
+#d= collection.find({'status': {"$gt": "C"}})
+#d= collection.find({'qty':{'$gt':75}})
+#d=collection.find({'item':'sketch pad','qty':95})
+#d=collection.find({'item':'sketch pad','qty':{"$gte":75}})
+#d=collection.find({'$or': [{'item':'sketch pad'}, {'qty':{"$gte":75}}]})
+collection.update_one({'item':'canvas'},{'$set':{'item':'SHARATH'}})
+d=collection.find({'item':'SHARATH'})
+for i in d:
+    print(i)
